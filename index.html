@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Deepak Software & Services — Modern Software Studio</title>
-  <meta name="description" content="Deepak Software & Services — custom apps built to your requirements." />
+  <title>Deepak Software & Services — Final Year Projects</title>
+  <meta name="description" content="Deepak Software & Services helps college students with ready final year projects — complete apps with Firebase integration and training." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -23,6 +24,7 @@
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
     *{box-sizing:border-box}
+
     html,body{height:100%}
     body{
       margin:0;
@@ -34,7 +36,6 @@
       padding-bottom:60px;
     }
 
-    /* layout */
     .container{max-width:1120px;margin:0 auto;padding:40px 24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
@@ -44,7 +45,6 @@
     a.link{color:var(--muted);text-decoration:none;font-weight:600}
     .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:12px;color:white;font-weight:700;text-decoration:none;box-shadow:0 6px 30px rgba(6,182,212,0.06);}
 
-    /* hero */
     .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:48px 0}
     .hero h2{font-size:42px;line-height:1.02;margin:0}
     .hero p{color:var(--muted);margin-top:14px;font-size:16px}
@@ -53,7 +53,6 @@
     .btn{padding:12px 16px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);cursor:pointer;color:var(--muted);font-weight:600}
     .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:white;box-shadow:0 10px 30px rgba(124,58,237,0.12);}
 
-    /* card preview */
     .preview{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:18px;padding:18px;backdrop-filter: blur(6px);box-shadow:0 20px 60px rgba(2,6,23,0.6);border:1px solid var(--glass-2)}
     .mock-screen{height:360px;border-radius:14px;overflow:hidden;position:relative;background:linear-gradient(180deg,#071427, #08162a);display:flex;flex-direction:column}
     .mock-top{padding:18px;display:flex;justify-content:space-between;align-items:center}
@@ -61,79 +60,54 @@
     .song{padding:18px 20px;margin-top:auto;background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));display:flex;align-items:center;gap:12px}
     .art{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:800}
 
-    /* visiting card flip */
-    .visiting-card-container {
-      width:220px; height:120px;
-      perspective:1000px;
-    }
-    .visiting-card {
-      width:100%; height:100%;
-      border-radius:14px;
-      transform-style: preserve-3d;
-      transition: transform 0.8s ease;
-      cursor:pointer;
-      box-shadow:0 10px 25px rgba(0,0,0,0.4);
-    }
-    .visiting-card.is-flipped { transform: rotateY(180deg); box-shadow: 0 20px 50px rgba(124,58,237,0.6); }
-    .visiting-card-face {
-      position:absolute; width:100%; height:100%; border-radius:14px;
-      backface-visibility:hidden;
-      display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; font-weight:700;
-    }
+    .visiting-card-container {width:220px; height:120px; perspective:1000px;}
+    .visiting-card {width:100%; height:100%; border-radius:14px; transform-style: preserve-3d; transition: transform 0.8s ease; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.4);}
+    .visiting-card.is-flipped { transform: rotateY(180deg); box-shadow: 0 20px 50px rgba(124,58,237,0.6);}
+    .visiting-card-face {position:absolute; width:100%; height:100%; border-radius:14px; backface-visibility:hidden; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; font-weight:700;}
     .visiting-card-front { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
-    .visiting-card-back { 
-      background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      transform: rotateY(180deg); 
-      font-weight:500;
-      font-size:13px;
-    }
+    .visiting-card-back { background: linear-gradient(135deg, var(--accent-2), var(--accent)); transform: rotateY(180deg); font-weight:500; font-size:13px;}
 
-    /* features */
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;border:1px solid var(--glass-2);}
     .card h3{margin:0 0 6px 0}
     .muted{color:var(--muted);font-size:14px}
 
-    /* animated blobs */
     .blob{position:absolute;right:-180px;top:-80px;width:420px;height:420px;border-radius:50%;filter:blur(60px);opacity:0.55;transform:translateZ(0);pointer-events:none}
     .b1{background:linear-gradient(45deg,var(--accent),transparent);animation:float 12s ease-in-out infinite}
     .b2{position:absolute;left:-160px;bottom:-120px;width:360px;height:360px;border-radius:50%;background:linear-gradient(45deg,var(--accent-2),transparent);filter:blur(48px);animation:float 10s ease-in-out infinite}
     @keyframes float{0%{transform:translateY(0) scale(1)}50%{transform:translateY(18px) scale(1.02)}100%{transform:translateY(0) scale(1)}}
 
-    /* footer */
     footer{margin-top:60px;padding:36px 0;border-top:1px solid rgba(255,255,255,0.03)}
 
-    /* responsive */
-    @media (max-width:920px){
-      .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:560px){
-      .grid{grid-template-columns:1fr}
-      nav{display:none}
-      .container{padding:22px}
-      .hero h2{font-size:28px}
-    }
+    @media (max-width:920px){.hero{grid-template-columns:1fr;} .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.grid{grid-template-columns:1fr} nav{display:none} .container{padding:22px} .hero h2{font-size:28px}}
 
-    /* micro interactions */
     .fade-up{opacity:0;transform:translateY(18px);transition:all 600ms cubic-bezier(.2,.9,.3,1)}
     .in-view{opacity:1;transform:translateY(0)}
 
-    /* small utilities */
     .small{font-size:13px;color:var(--muted)}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700}
 
-    /* contact form */
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .field{display:flex;flex-direction:column;gap:8px}
     input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:white}
     textarea{min-height:120px}
-
-    /* subtle underline animation for links */
     a.underline{position:relative}
     a.underline:after{content:'';position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));bottom:-6px;transform:scaleX(0);transform-origin:left;transition:transform .35s}
     a.underline:hover:after{transform:scaleX(1)}
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("Qc5RURYHcQsPgvWBS"); // replace with your Public Key
+   })();
+</script>
+
+
+
+
+
 </head>
 <body>
   <div class="blob b1"></div>
@@ -144,52 +118,47 @@
         <div class="logo">DS</div>
         <div>
           <h1>Deepak Software & Services</h1>
-          <div class="small">Custom Apps • Automation • Local Business Solutions</div>
+          <div class="small">Final Year Projects • Custom Apps • Firebase Integration</div>
         </div>
       </div>
       <nav>
         <a class="link" href="#services">Services</a>
-        <a class="link" href="#work">Top Projects</a>
+        <a class="link" href="#work">Projects</a>
         <a class="link" href="#contact">Contact</a>
-        <a class="cta" href="#contact">Get a Quote</a>
+        <a class="cta" href="#contact">Get a Project</a>
       </nav>
     </header>
 
     <section class="hero">
       <div>
-        <h2 class="fade-up">Custom apps built to your requirements — fast, secure, and reliable.</h2>
-        <p class="fade-up">We specialize in building Android & web apps tailored to your business needs, including booking platforms, billing systems, and esports tournament apps.</p>
-
+        <h2 class="fade-up">Final Year Project Made Easy 🚀</h2>
+        <p class="fade-up">We help college students by building ready-to-use apps based on their ideas and requirements. Each app is connected with Firebase and comes with a full training session on how it works, APIs used, and data storage.</p>
         <div class="controls fade-up">
           <button class="btn primary">Request Demo</button>
           <button class="btn">Explore Services</button>
         </div>
       </div>
-
       <aside class="preview fade-up">
         <div class="mock-screen">
           <div class="mock-top">
             <div class="dot"></div>
             <div class="small">Preview</div>
           </div>
-
           <div style="flex:1;display:grid;place-items:center">
-            <!-- interactive visiting card -->
             <div class="visiting-card-container">
               <div class="visiting-card" id="visitingCard">
                 <div class="visiting-card-face visiting-card-front">
                   <div style="font-size:16px">Deepak Software & Services</div>
-                  <div style="font-size:12px; margin-top:6px;">Custom App Development</div>
+                  <div style="font-size:12px; margin-top:6px;">Final Year Project Support</div>
                 </div>
                 <div class="visiting-card-face visiting-card-back">
                   <div>Email: deepaksoftware98@gmail.com</div>
-                  <div style="margin-top:4px;">Phone: +91 7499341045</div>
-                  <div style="margin-top:4px;">Web/App Solutions</div>
+                  <div style="margin-top:4px;">Phone: +91 7499341045 / 9011467516</div>
+                  <div style="margin-top:4px;">Custom Apps & Firebase Solutions</div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="song">
             <div class="art">DS</div>
             <div style="flex:1">
@@ -204,63 +173,103 @@
       </aside>
     </section>
 
-    <section id="work">
-      <h2 class="fade-up">Top Projects</h2>
-      <p class="muted fade-up">Some of our featured apps developed to meet client requirements.</p>
+    <section id="services">
+      <h2 class="fade-up">Our Services</h2>
+      <p class="muted fade-up">We provide complete project development and guidance for students.</p>
+      <div class="grid" style="margin-top:18px">
+        <div class="card fade-up">
+          <h3>Custom Final Year Projects</h3>
+          <div class="small">Get mobile/web apps built from your own idea with Firebase integration.</div>
+        </div>
+        <div class="card fade-up">
+          <h3>Training Sessions</h3>
+          <div class="small">Learn how the app works, APIs used, and how to explain it in viva.</div>
+        </div>
+        <div class="card fade-up">
+          <h3>Documentation Support</h3>
+          <div class="small">Guidance for preparing reports, flow diagrams, and project explanations.</div>
+        </div>
+      </div>
+    </section>
 
+    <section id="work">
+      <h2 class="fade-up">Sample Projects</h2>
       <div class="grid" style="margin-top:18px">
         <div class="card fade-up">
           <h3>Book My Barber</h3>
-          <div class="small">Online queue system where users can stand in line and barbers update the current queue number in real-time.</div>
+          <div class="small">Real-time queue system for barbershops using Firebase.</div>
         </div>
         <div class="card fade-up">
           <h3>Battle Core League</h3>
-          <div class="small">Esports tournament platform allowing players to join solo, duo, or squad competitions.</div>
+          <div class="small">Esports tournament app with solo, duo, and squad modes.</div>
         </div>
         <div class="card fade-up">
           <h3>Billing Software</h3>
-          <div class="small">Billing system with Bluetooth printing and a waiter panel for taking orders via mobile and sending KOT.</div>
+          <div class="small">Restaurant billing system with Bluetooth printing & waiter panel.</div>
         </div>
       </div>
     </section>
 
-    <section id="contact" style="margin-top:42px">
-      <h2 class="fade-up">Let's build something</h2>
-      <div class="muted fade-up">Tell us about your project — we'll respond within 24 hours.</div>
-
-      <div class="contact fade-up" style="margin-top:18px">
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div class="field">
-            <label class="small">Name</label>
-            <input placeholder="Your name" />
-          </div>
-          <div class="field">
-            <label class="small">Email</label>
-            <input placeholder="you@company.com" />
-          </div>
-          <div class="field">
-            <label class="small">Phone (optional)</label>
-            <input placeholder="+91 98xxxxxx" />
-          </div>
-        </div>
-
-        <div>
-          <div class="field">
-            <label class="small">Project details</label>
-            <textarea placeholder="Tell us briefly what you need"></textarea>
-          </div>
-          <div style="display:flex;justify-content:flex-end;margin-top:12px">
-            <button class="btn primary">Send Message</button>
-          </div>
-        </div>
+   <section id="contact" style="margin-top:42px">
+  <h2 class="fade-up">Contact Us</h2>
+  <div class="muted fade-up">Tell us about your project — we'll respond within 24 hours.</div>
+  
+  <!-- FORM START -->
+  <form id="contact-form" class="contact fade-up" style="margin-top:18px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="field">
+        <label class="small">Name</label>
+        <input type="text" name="from_name" placeholder="Your name" required />
       </div>
-    </section>
+      <div class="field">
+        <label class="small">Email</label>
+        <input type="email" name="reply_to" placeholder="you@company.com" required />
+      </div>
+      <div class="field">
+        <label class="small">Phone (optional)</label>
+        <input type="text" name="phone" placeholder="+91 98xxxxxx" />
+      </div>
+    </div>
+    <div>
+      <div class="field">
+        <label class="small">Project details</label>
+        <textarea name="message" placeholder="Tell us briefly what you need" required></textarea>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:12px">
+        <button type="submit" class="btn primary">Send Message</button>
+      </div>
+    </div>
+  </form>
+  <!-- FORM END -->
+</section>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("Qc5RURYHcQsPgvWBS"); // Replace with your EmailJS public key
+  })();
+
+  // Form handler
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_od5vtyf', 'template_1l48sp2', this)
+      .then(() => {
+        alert('✅ Message sent successfully! We’ll get back to you soon.');
+        this.reset();
+      }, (error) => {
+        alert('❌ Failed to send message. Error: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
 
     <footer>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
         <div>
           <div style="font-weight:800">Deepak Software & Services</div>
-          <div class="small">Custom software solutions for your business. contact: deepaksoftware98@gmail.com</div>
+          <div class="small">Email: deepaksoftware98@gmail.com | Phone: +91 7499341045 / 9011467516</div>
         </div>
         <div class="small">© <span id="year"></span> All rights reserved.</div>
       </div>
@@ -269,23 +278,12 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('in-view');
-      });
-    },{threshold:0.12});
+    const observer = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in-view');});},{threshold:0.12});
     document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
-
-    // Flip visiting card on click
     const visitingCard = document.getElementById('visitingCard');
-    visitingCard.addEventListener('click', () => {
-      visitingCard.classList.toggle('is-flipped');
-    });
-
-    document.querySelector('.btn.primary').addEventListener('click',()=>{
-      alert('Thanks! This is a demo page. Replace with your contact backend or mailto link.');
-    });
+    visitingCard.addEventListener('click', () => {visitingCard.classList.toggle('is-flipped');});
+    document.querySelector('.btn.primary').addEventListener('click',()=>{alert('Thanks! This is a demo page. Replace with your backend or email integration.');});
   </script>
+  
 </body>
 </html>
